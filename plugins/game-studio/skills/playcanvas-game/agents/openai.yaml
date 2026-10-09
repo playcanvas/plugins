@@ -1,0 +1,4 @@
+interface:
+  display_name: "PlayCanvas Game"
+  short_description: "Build browser games with PlayCanvas Engine"
+  default_prompt: "Use $playcanvas-game to build a PlayCanvas browser game with a playable core loop."

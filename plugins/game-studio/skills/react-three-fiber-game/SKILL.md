@@ -29,6 +29,7 @@ Recommended stack:
 ## Do Not Use This Skill When
 
 - the app is not React-based
+- the project uses `@playcanvas/react` or the user chooses PlayCanvas
 - the project wants a cleaner imperative runtime with minimal React coordination
 - the problem is asset packaging rather than runtime composition
 
