@@ -22,6 +22,7 @@ Default rule: simulation state is owned outside the renderer, browser UI is not 
 - the runtime track is clearly Phaser
 - the runtime track is clearly vanilla Three.js
 - the runtime track is clearly React Three Fiber
+- the runtime track is clearly PlayCanvas Engine
 - the task is purely about shipped 3D assets
 
 Once the stack is clear, hand off to the runtime or asset specialist skill.
@@ -55,7 +56,7 @@ Once the stack is clear, hand off to the runtime or asset specialist skill.
 - Default to vanilla Three.js for explicit 3D scenes that want direct scene, camera, renderer, and loop control in plain TypeScript or Vite.
 - Default to React Three Fiber when the 3D scene lives inside a React application and needs declarative composition, shared app state, or React-first UI coordination.
 - Use raw WebGL only for shader-heavy or renderer-first projects where engine abstractions would get in the way.
-- Keep Babylon.js and PlayCanvas as alternative-engine paths rather than the default code-generation target.
+- Route a chosen or existing PlayCanvas Engine project to `../playcanvas-game/SKILL.md`. Keep Babylon.js as a comparison path.
 
 See `../../references/engine-selection.md` for the default decision table.
 
@@ -92,4 +93,5 @@ Define these before writing core code:
 - Three.js structure: `../../references/three-webgl-architecture.md`
 - Three.js ecosystem stack: `../../references/threejs-stack.md`
 - React Three Fiber stack: `../../references/react-three-fiber-stack.md`
+- PlayCanvas implementation: `../playcanvas-game/SKILL.md`
 - 3D asset shipping: `../../references/web-3d-asset-pipeline.md`

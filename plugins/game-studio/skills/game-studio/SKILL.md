@@ -25,6 +25,7 @@ This plugin is intentionally asymmetric:
 
 - the runtime is clearly plain Three.js
 - the runtime is clearly React Three Fiber
+- the runtime is clearly PlayCanvas Engine
 - the task is clearly a shipped-asset problem
 - the task is clearly frontend-only or QA-only
 
@@ -37,13 +38,15 @@ Once the intent is clear, route to the most specific specialist skill and contin
    - `3D + plain TS/Vite`: imperative scene control, engine-like loops, non-React apps, direct Three.js work.
    - `3D + React`: React-hosted product surfaces, declarative scene composition, shared React state, UI-heavy 3D apps.
    - `3D asset pipeline`: GLB, glTF, texture packaging, compression, LOD, runtime asset size.
-   - `Alternative engine`: Babylon.js or PlayCanvas requests, usually as comparison or ecosystem fit questions.
+   - `PlayCanvas`: the user chooses PlayCanvas Engine or the project already uses it, including its React and Web Components packages.
+   - `Alternative engine`: Babylon.js requests and engine comparisons.
    - `Shared`: core loop design, frontend direction, save/debug/perf boundaries, browser QA.
 2. Route to the specialist skills immediately after classification:
    - Shared architecture and engine choice: `../web-game-foundations/SKILL.md`
    - Deep 2D implementation: `../phaser-2d-game/SKILL.md`
    - Vanilla Three.js implementation: `../three-webgl-game/SKILL.md`
    - React-hosted 3D implementation: `../react-three-fiber-game/SKILL.md`
+   - PlayCanvas implementation: `../playcanvas-game/SKILL.md`
    - 3D asset shipping and optimization: `../web-3d-asset-pipeline/SKILL.md`
    - HUD and menu direction: `../game-ui-frontend/SKILL.md`
    - 2D sprite generation and normalization: `../sprite-pipeline/SKILL.md`
@@ -58,6 +61,7 @@ Once the intent is clear, route to the most specific specialist skill and contin
    - Default to Phaser for 2D browser games.
    - Choose vanilla Three.js when the project is explicitly 3D and wants direct render-loop control in a plain TypeScript or Vite app.
    - Choose React Three Fiber when the project already lives in React or wants declarative scene composition with shared React state.
+   - Choose PlayCanvas when the user requests it or the project already uses its Engine, React, or Web Components packages.
    - Choose raw WebGL only when the user explicitly wants a custom renderer or shader-first surface.
 4. Define the UI surface early. Browser games usually need a DOM HUD and menu layer even when the playfield is canvas or WebGL.
    - For 3D starter scaffolds, default to a low-chrome HUD that preserves the playfield and keeps secondary panels collapsed.
@@ -71,7 +75,7 @@ Once the intent is clear, route to the most specific specialist skill and contin
 - For planning requests, return a game-specific plan with stack choice, gameplay loop, UI surface, asset workflow, and test approach.
 - For implementation requests, keep the chosen stack obvious in the file structure and code boundaries.
 - For mixed requests, preserve the plugin default: 2D Phaser first unless the user asks for something else.
-- When the user asks about Babylon.js or PlayCanvas, compare them honestly but keep Three.js and R3F as the primary code-generation defaults unless the user explicitly chooses another engine.
+- When the user chooses PlayCanvas, use its implementation path. Keep Three.js and R3F as the default 3D code-generation paths when no engine is chosen.
 
 ## References
 
@@ -90,5 +94,6 @@ Once the intent is clear, route to the most specific specialist skill and contin
 - "I need a Phaser-based action game loop with a HUD and menus."
 - "I want a Three.js exploration demo with WebGL lighting and browser-safe UI."
 - "I want a React-based 3D configurator with React Three Fiber."
+- "Build a PlayCanvas game using the Engine package already in my project."
 - "Optimize my GLB assets for the web and keep the file sizes under control."
 - "Set up the asset workflow for consistent 2D sprite animations."

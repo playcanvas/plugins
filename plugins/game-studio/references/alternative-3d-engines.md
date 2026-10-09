@@ -1,6 +1,6 @@
 # Alternative 3D Engines
 
-This plugin defaults to Three.js and React Three Fiber for code generation. Babylon.js and PlayCanvas still matter, but they are reference-only alternatives in the current plugin shape.
+This plugin defaults to Three.js and React Three Fiber for 3D code generation. Babylon.js remains a comparison path. PlayCanvas Engine has a dedicated implementation skill at `../skills/playcanvas-game/SKILL.md`.
 
 ## Babylon.js
 
@@ -47,4 +47,4 @@ What PlayCanvas is good at:
 
 ## Default recommendation
 
-If the user has not already chosen Babylon.js or PlayCanvas, prefer Three.js or React Three Fiber in this plugin because they give the best balance of portability, ecosystem depth, and predictable code generation across normal browser-game repos.
+If the user has not chosen an engine, use the plugin's Three.js or React Three Fiber default for 3D work. Preserve an explicit PlayCanvas choice.
